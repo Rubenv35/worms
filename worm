@@ -23,6 +23,7 @@ public class Worm {
 		this.setX(x);
 		this.setY(y);
 	}
+	//test
 	/**
 	 * 
 	 * @param x
