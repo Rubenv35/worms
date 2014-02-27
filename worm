@@ -1,0 +1,65 @@
+package worms.model;
+
+import be.kuleuven.cs.som.annotate.Basic;
+
+/**
+ * A class containing all methods which apply to the worm's position, orientation,
+ * name, radius, mass, action points and actions
+ * 
+ * @author Ruben Vroonen (eltcws) & Dries Hendrikx (cwselt1)
+ * @version 1.0
+ */
+public class Worm {
+	double g = 9.80665;
+	//position defensively
+	/**
+	 * Set the position to a given x- and y-coordinate
+	 * @param x
+	 * @param y
+	 * @post	
+	 * 			|
+	 */
+	public void setPosition(double x, double y){
+		this.setX(x);
+		this.setY(y);
+	}
+	/**
+	 * 
+	 * @param x
+	 */
+	public void setX(double x){
+		this.position[0] = x;
+	}
+	/**
+	 * 
+	 * @param y
+	 */
+	public void setY(double y){
+		this.position[1] = y;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	@Basic
+	public double[] getPosition(){
+		return this.position;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	@Basic
+	public double getX(){
+		return this.position[0];
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	@Basic
+	public double getY(){
+		return this.position[1];
+	}
+	
+	private double[] position;
